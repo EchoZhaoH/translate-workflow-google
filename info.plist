@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>io.z72.alfredapp.tr</string>
+	<string>echozh.alfredapp.tg</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -265,6 +265,10 @@ fi
 			<integer>40</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
