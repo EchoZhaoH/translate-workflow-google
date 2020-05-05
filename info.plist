@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>io.z72.alfredapp.tr</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>DD7F0761-2B81-471E-A432-A9C78C768E84</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E35DAB65-BB97-42E6-80FA-BBEF3E5B019A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4DA91BE3-46C0-4CC4-B20D-0A95540D0333</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Large Type</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>798E8B3B-CD22-4D5D-9D0C-B3B240E13037</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open in Google Translate</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E35DAB65-BB97-42E6-80FA-BBEF3E5B019A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D0C0D478-AE60-4F38-B065-A598E246E574</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>echozh</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Google Translate</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Translation copied to clipboard</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>D0C0D478-AE60-4F38-B065-A598E246E574</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string></string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>E35DAB65-BB97-42E6-80FA-BBEF3E5B019A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>tg</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>翻译中...</string>
+				<key>script</key>
+				<string>###########################################################
+# CONFIGURATION
+
+# Enable this translation set?
+ENABLE=true
+# Set the source language
+SOURCE_LANGUAGE="en"
+# Set the destination language
+DESTINATION_LANGUAGE="zh-CN"
+# Set the display name for this translation
+DISPLAY_NAME="简体中文"
+
+# END OF CONFIGURATION
+###########################################################
+
+if $ENABLE; then
+  ./translate.js "$SOURCE_LANGUAGE" "$DESTINATION_LANGUAGE" "{query}" "$DISPLAY_NAME"
+fi
+</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>谷歌翻译</string>
+				<key>title</key>
+				<string>中英互译</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>DD7F0761-2B81-471E-A432-A9C78C768E84</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>4DA91BE3-46C0-4CC4-B20D-0A95540D0333</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://translate.google.com/#auto/auto/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>798E8B3B-CD22-4D5D-9D0C-B3B240E13037</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>4DA91BE3-46C0-4CC4-B20D-0A95540D0333</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+		<key>798E8B3B-CD22-4D5D-9D0C-B3B240E13037</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>320</integer>
+		</dict>
+		<key>D0C0D478-AE60-4F38-B065-A598E246E574</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>530</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>DD7F0761-2B81-471E-A432-A9C78C768E84</key>
+		<dict>
+			<key>note</key>
+			<string>1st Translation Set</string>
+			<key>xpos</key>
+			<integer>120</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>E35DAB65-BB97-42E6-80FA-BBEF3E5B019A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+{
+  "name": "translate-workflow-google",
+  "version": "1.0.0",
+  "description": "Alfred Google Translate Workflow ==================================",
+  "main": "translate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EchoZw/translate-workflow-google.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EchoZw/translate-workflow-google/issues"
+  },
+  "homepage": "https://github.com/EchoZw/translate-workflow-google#readme",
+  "dependencies": {
+    "translation.js": "^0.7.13"
+  }
+}
